@@ -5,7 +5,7 @@ import Dropdown from '../../components/Dropdown/Dropdown'
 import './style.scss'
 const Home = () => {
 
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState("")
     const [showDropdown, setShowDropdown] = useState(false)
     return (
         <div className="HomePage">
@@ -29,7 +29,9 @@ const Home = () => {
             </div>
 
             {showDropdown && (
-                <Dropdown />
+                <Dropdown
+                    setSearch={setSearch}
+                />
             )}
 
         </div>
